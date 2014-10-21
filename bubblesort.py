@@ -3,11 +3,6 @@
 def bubblesort(x):
     if len(x) <= 1:
         return x
-    elif len(x) == 2:
-        if x[0] < x[1]:
-            return x
-        else:
-            return [x[1],x[0]]
     else:
         while True:
             swapped = False
@@ -20,6 +15,9 @@ def bubblesort(x):
         return x
 
 def main():
+    print bubblesort([])    
+    print bubblesort([4])  
+    print bubblesort([4,3])  
     print bubblesort([4,3,2,1])
     
     
