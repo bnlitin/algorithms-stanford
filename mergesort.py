@@ -1,3 +1,11 @@
+###################################################################
+# Class: Algorithms: Design and Analysis, Stanford
+# Project: Mergesort
+# Author: Boris Litinsky
+# Date: 10/28/2014
+# Description: Mergesort algorithm
+###################################################################
+
 def merge(a,b):
     i = 0
     j = 0

@@ -1,23 +1,33 @@
+###################################################################
+# Class: Algorithms: Design and Analysis, Stanford
+# Project: Quicksort 
+# Author: Boris Litinsky
+# Date: 10/28/2014
+# Description: Quicksort algorithm from Programming Question 2
+###################################################################
+
 #Answers are:
 #size    first      last      median
 #10        25        29        21
 #100      615        587      518
 #1000    10297      10184    8921
 
+# return meidan pivot
 def median_pivot(array):
     first = array[0]
     last = array[-1]
     if len(array) % 2 == 0: # even
         med = array[(len(array) // 2)-1]
     else:
-        med = array[(len(array) + 1) // 2]
+        med = array[(len(array) ) // 2]
     
     elements = [first,med,last]
     elements.sort()
     median = elements[1]
-    print "median array",array,"list",elements,"pivot",median
+    #print "median array",array,"list",elements,"pivot",median
     return median
 
+# quick sort
 def qsort(array,pivot):
     global count
     count = 0
@@ -36,7 +46,7 @@ def _qsort(array, l, r, pivot):
             median = median_pivot(array[l:r])
             m = array.index(median)
             array[m], array[l] = array[l], array[m]
-            print "swapping",array[m],"for",array[l],"index:",m,l
+            #print "swapping",array[m],"for",array[l],"index:",m,l,"array",array
             
         p = array[l]
         i = l + 1
@@ -52,9 +62,9 @@ def _qsort(array, l, r, pivot):
         _qsort(array, i, r, pivot)
         
     
-#unsorted = [int(v) for v in open("QuickSort.txt").read().split()]
+unsorted = [int(v) for v in open("QuickSort.txt").read().split()]
 #unsorted = [3,9,8,4,6,10,2,5,7,1]
-#unsorted = [int(v) for v in open("10.txt").read().split()]
+#unsorted = [int(v) for v in open("1000.txt").read().split()]
 #qsort(unsorted, 'first')
 #qsort(unsorted, 'last')
 qsort(unsorted,'med')

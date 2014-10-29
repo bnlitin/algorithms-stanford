@@ -1,3 +1,11 @@
+###################################################################
+# Class: Algorithms: Design and Analysis, Stanford
+# Project: Towers of Hanoi
+# Author: Boris Litinsky
+# Date: 10/28/2014
+# Description: Recursive algorithm to solve Towers of Hanoi
+###################################################################
+
 def hanoi(n, source, helper, target):
     if n > 0:
         print "n",n,"source",source,"helper",helper,"target",target

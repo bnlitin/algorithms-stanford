@@ -1,4 +1,10 @@
-# bubble sort
+###################################################################
+# Class: Algorithms: Design and Analysis, Stanford
+# Project: Bubblesort
+# Author: Boris Litinsky
+# Date: 10/28/2014
+# Description: 
+###################################################################
 
 def bubblesort(x):
     if len(x) <= 1:

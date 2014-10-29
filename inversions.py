@@ -1,7 +1,14 @@
+###################################################################
+# Class: Algorithms: Design and Analysis, Stanford
+# Project: Inversions
+# Author: Boris Litinsky
+# Date: 10/28/2014
+# Description: Counting inversions
+###################################################################
+
 count = 0
 
 def merge_sort(li):
-
     if len(li) < 2: return li 
     m = len(li) / 2 
     return merge(merge_sort(li[:m]), merge_sort(li[m:])) 
