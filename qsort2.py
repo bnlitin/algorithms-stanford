@@ -8,7 +8,9 @@ def _quicksort(array, start, stop):
     global count
 
     if stop - start > 0:
-        pivot, left, right = array[stop], start, stop
+        pivot, left, right = array[start], start, stop
+        if stop - start > 1:
+            count += stop-start
         print "array",array,"start",start,"stop",stop,"pivot",pivot,"cmp",(stop-start)
         while left <= right:
             while array[left] < pivot:
